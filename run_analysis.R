@@ -27,3 +27,4 @@ DT<-as.data.table(TIDYreshapred)
 RESULT<-as.data.frame(DT[,mean(VALUE),by=list(Subject,MEASURE)])
 
 dcast(RESULT,Subject~MEASURE, value.var="V1")
+write.csv(ENDRESULT, file = "ENDREUSLT.csv")
